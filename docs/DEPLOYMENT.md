@@ -32,6 +32,8 @@ In production, the backend will serve the static site from that build folder.
 
 If you host the backend and frontend separately, keep `CLIENT_URL` set to your deployed frontend URL and use `npm run start --workspace server` for the API.
 
+Note: The client defaults to a relative API path (`/api`) in production so it will call the same origin where the server is hosted. If you host the frontend separately, set `VITE_API_URL` in your frontend environment to your API base (for example `https://api.your-domain.com/api`).
+
 ## Suggested Hosting
 
 - Frontend: Vercel, Netlify, or static hosting from Express.
